@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "driftwatch"
+version = "0.1.0"
+description = "Detect configuration drift across Kubernetes and GCP infrastructure."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Adonis Shabani"},
+]
+
+# Phase 1 has no external dependencies beyond pytest for testing.
+# We will add kubernetes, google-cloud-*, pyyaml, etc. as we reach later phases.
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
