@@ -1,4 +1,8 @@
-"""BaseSource - abstract base class that all infrastructure sources implement.
+from abc import ABC, abstractmethod
 
-Built in Phase 2.
-"""
+from driftwatch.core import Snapshot
+
+class BaseSource(ABC):
+    @abstractmethod
+    def collect(self) -> Snapshot:
+        ...

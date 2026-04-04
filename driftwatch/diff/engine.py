@@ -1,4 +1,3 @@
-from math import exp
 from driftwatch.core.snapshot import Snapshot
 from driftwatch.core.report import Diff, Severity, DriftReport
 

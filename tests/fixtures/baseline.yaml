@@ -1,1 +1,8 @@
-# Phase 1: You will populate this fixture once Snapshot.data schema is defined.
+source: file
+data:
+  deployment/nginx:
+    replicas: 3
+    image: nginx:1.25
+  configmap/app-config:
+    LOG_LEVEL: info
+    MAX_CONNECTIONS: "100"
