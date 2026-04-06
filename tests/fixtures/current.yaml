@@ -1,0 +1,8 @@
+source: file
+data:
+  deployment/nginx:
+    replicas: 2
+    image: nginx:1.25
+  configmap/app-config:
+    LOG_LEVEL: info
+    MAX_CONNECTIONS: "100"

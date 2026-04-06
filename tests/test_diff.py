@@ -3,7 +3,6 @@ import tempfile
 import pytest
 from dataclasses import FrozenInstanceError
 from driftwatch import Snapshot, diff
-from driftwatch.core import report
 from driftwatch.core.report import Severity, Diff, DriftReport
 from driftwatch.diff.engine import diff_snapshots
 
